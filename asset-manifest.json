@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/questions_answers/static/css/main.dfd105b0.chunk.css",
+    "main.js": "/questions_answers/static/js/main.20d8f714.chunk.js",
+    "main.js.map": "/questions_answers/static/js/main.20d8f714.chunk.js.map",
+    "runtime-main.js": "/questions_answers/static/js/runtime-main.c739c303.js",
+    "runtime-main.js.map": "/questions_answers/static/js/runtime-main.c739c303.js.map",
+    "static/js/2.a2b52020.chunk.js": "/questions_answers/static/js/2.a2b52020.chunk.js",
+    "static/js/2.a2b52020.chunk.js.map": "/questions_answers/static/js/2.a2b52020.chunk.js.map",
+    "index.html": "/questions_answers/index.html",
+    "static/css/main.dfd105b0.chunk.css.map": "/questions_answers/static/css/main.dfd105b0.chunk.css.map",
+    "static/js/2.a2b52020.chunk.js.LICENSE.txt": "/questions_answers/static/js/2.a2b52020.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c739c303.js",
+    "static/js/2.a2b52020.chunk.js",
+    "static/css/main.dfd105b0.chunk.css",
+    "static/js/main.20d8f714.chunk.js"
+  ]
+}
