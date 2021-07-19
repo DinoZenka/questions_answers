@@ -21,6 +21,16 @@
   flex-direction: column;
   width: 100%;
 }
+.form-container .form .question-container:not(:last-child) {
+  margin-bottom: 30px;
+}
+.form-container .form .question-container:last-of-type {
+  margin-bottom: 10px;
+}
+
+.question-container .question {
+  margin-bottom: 10px;
+}
 
 .question-container .answer {
   border: 1px solid rgba(#fff, 0.8);
@@ -28,10 +38,9 @@
   padding: 5px;
   background-color: transparent;
   outline: none;
-  margin-top: 20px;
-  margin-bottom: 30px;
   width: 100%;
 }
+
 .question-container .answer:focus {
   border-color: #fea133;
   box-shadow: 1px 2px 10px #fea133;
@@ -44,6 +53,7 @@
   width: 135px;
   height: 35px;
   cursor: pointer;
+  margin-top: 20px;
 }
 .form-container .send-button:hover {
   box-shadow: 1px 2px 10px #e3f820;
