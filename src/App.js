@@ -27,9 +27,13 @@ const App = () => {
   React.useEffect(() => {
 
     const newObj = {};
+    const localStorObject = JSON.parse(localStorage.getItem("QUEST"));
+    if (localStorObject) {
+      setAnswers(localStorObject);
+      return;
+    }
     for (let i of questions) {
-      const val = localStorage.getItem(i.question);
-      newObj[i.question] = val ? val : "";
+      newObj[i.question] = "";
     }
     setAnswers(newObj);
   }, [questions]);
@@ -55,13 +59,17 @@ const App = () => {
     }
     setAllValid(canSend);
     const newObj = { ...answers };
+    const toLocalObject = { ...answers };
 
     if (canSend) {
       Object.values(allValids.current).forEach(el => {
         const [quest, answ] = Object.entries(el)[1];
-        localStorage.setItem(quest, answ);
         newObj[quest] = "";
+        toLocalObject[quest] = answ;
       });
+      localStorage.setItem('QUEST', JSON.stringify(toLocalObject));
+
+      setAnswers(newObj);
       setSuccess(true);
       setTimeout(() => {
         Swal.fire({
@@ -72,8 +80,6 @@ const App = () => {
       }, 200);
 
     }
-
-    setAnswers(newObj);
     e.preventDefault();
   }
 

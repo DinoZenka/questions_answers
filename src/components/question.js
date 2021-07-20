@@ -45,10 +45,6 @@ const useInput = (initialValue, validations, isReset) => {
   const [isDirty, setDirty] = React.useState(false);
   const valid = useValidation(value, validations);
 
-  if (value !== "" && initialValue === "") {
-    setValue("");
-  }
-
   const onChange = (e) => {
     setValue(e.target.value);
   }
@@ -83,8 +79,8 @@ const Question = ({ question, id, isFormValid, initial }) => {
         className="answer"
         type="text"
         value={val.value}
-        onChange={e => val.onChange(e)}
-        onBlur={e => val.onBlur(e)}
+        onChange={(e) => val.onChange(e)}
+        onBlur={(e) => val.onBlur(e)}
         name={question}
         placeholder={"*Введите текст"}
         required
